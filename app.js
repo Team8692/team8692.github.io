@@ -1,4 +1,4 @@
-var apibase = "https://cdn.rawgit.com/Team8692/team8692.github.io/87354279/";
+var apibase = "https://rawgit.com/Team8692/team8692.github.io/master/";
 
 $(function(){
 	var team = new Gh3.User("team8692"), teamBlog = new Gh3.Repository("team8692.github.io", team);
