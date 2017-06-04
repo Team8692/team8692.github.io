@@ -9,7 +9,7 @@ $(function() {
                 master.eachContent(function(content) {
                     if(content.name.charAt(0) == '!') {
                        $.get(content.name, function(data, status) {
-                           $("body").append(markdown.makeHtml(data));
+                           $("#content").append(markdown.makeHtml(data));
                        });
                     }
                 });
