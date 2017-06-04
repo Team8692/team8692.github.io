@@ -8,7 +8,7 @@ $(function() {
             master.fetchContents(function(err, res) {
                 master.eachContent(function(content) {
                     if(content.name.charAt(0) == '!') {
-                       console.log("test");
+                       console.log(content.name);
                     }
                 });
             });
