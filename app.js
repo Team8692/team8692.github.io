@@ -12,9 +12,9 @@ $(function(){
 			  src: apibase+content.name,
 			  style: "display: none;"
 			}).appendTo("body");
-		  }
-		});
+		  });
+	     });
 	  });
-	});
+      });
   });
 });
