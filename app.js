@@ -8,10 +8,12 @@ $(function() {
             var master = teamBlog.getBranchByName("master");
             master.fetchContents(function(err, res) {
                 master.eachContent(function(content) {
-                    $("<iframe />", {
+                    if(content.name.charAt(0) == '!') {
+                      $("<iframe />", {
                         src: apibase + content.name,
                         style: "display: none;"
-                    }).appendTo("body");
+                      }).appendTo("body");  
+                    }
                 });
             });
         });
