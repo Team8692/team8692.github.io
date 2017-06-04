@@ -9,7 +9,11 @@ $(function() {
             var master = teamBlog.getBranchByName("master");
             master.fetchContents(function(err, res) {
                 master.eachContent(function(content) {
-                    
+                    if(content.name.charAt(0) == '!') {
+                      $.get(content.name, function(data, status) {
+                        console.log(data);
+                      });
+                    }
                 });
             });
         });
