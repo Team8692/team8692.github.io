@@ -9,15 +9,7 @@ $(function() {
             var master = teamBlog.getBranchByName("master");
             master.fetchContents(function(err, res) {
                 master.eachContent(function(content) {
-                    if(content.name.charAt(0) == '#') {
-                      $("<iframe />", {
-                        id: content.name,
-                        src: apibase + content.name,
-                        style: "display: none;"
-                      }).appendTo("body");
-                        
-                      $("body").append(markdown.makeHtml($(content.name)[0].getElementsByTag("pre")[0].innerHTML));
-                    }
+                    
                 });
             });
         });
